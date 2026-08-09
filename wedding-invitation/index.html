@@ -1,0 +1,507 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mahmoud & Bride's Wedding Invitation | August 19, 2026</title>
+  <meta name="description" content="You are cordially invited to celebrate the wedding of Mahmoud and his Bride at the Hilton Hotel on August 19, 2026. Join us for a magical evening!">
+  
+  <!-- Google Fonts: Playfair Display & Montserrat -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700;900&family=Montserrat:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Great+Vibes&display=swap" rel="stylesheet">
+  
+  <!-- FontAwesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Floating Sparkles & Petals Background Canvas -->
+  <canvas id="sparklesCanvas"></canvas>
+
+  <!-- Top Navigation Bar -->
+  <header class="navbar" id="navbar">
+    <div class="nav-container">
+      <a href="#hero" class="nav-logo">
+        <span class="logo-groom">M</span>
+        <span class="logo-amp">&amp;</span>
+        <span class="logo-bride" id="navBrideName">Bride</span>
+      </a>
+
+      <nav class="nav-links">
+        <a href="#hero"><i class="fa-solid fa-heart"></i> Home</a>
+        <a href="#story"><i class="fa-solid fa-book-open"></i> Story</a>
+        <a href="#countdown"><i class="fa-solid fa-clock"></i> Countdown</a>
+        <a href="#details"><i class="fa-solid fa-calendar-day"></i> Details</a>
+        <a href="#venue"><i class="fa-solid fa-location-dot"></i> Venue</a>
+        <a href="#rsvp"><i class="fa-solid fa-envelope"></i> RSVP</a>
+        <a href="#wishes"><i class="fa-solid fa-comment-dots"></i> Wishes</a>
+      </nav>
+
+      <div class="nav-actions">
+        <!-- Audio Music Toggle -->
+        <button id="musicToggleBtn" class="btn-icon" title="Toggle Wedding Music">
+          <i class="fa-solid fa-music"></i>
+          <span class="music-wave" id="musicWave"></span>
+        </button>
+
+        <!-- Edit Bride Name Quick Action -->
+        <button id="editBrideBtn" class="btn-gold-sm" title="Customize Bride Name">
+          <i class="fa-solid fa-pen-to-square"></i> <span class="hide-mobile">Edit Name</span>
+        </button>
+
+        <!-- Mobile Menu Hamburger -->
+        <button id="mobileMenuBtn" class="mobile-menu-btn" aria-label="Toggle Menu">
+          <i class="fa-solid fa-bars"></i>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Navigation Drawer -->
+  <div class="mobile-drawer" id="mobileDrawer">
+    <button class="close-drawer-btn" id="closeDrawerBtn">&times;</button>
+    <div class="mobile-nav-links">
+      <a href="#hero" class="drawer-link"><i class="fa-solid fa-heart"></i> Home</a>
+      <a href="#story" class="drawer-link"><i class="fa-solid fa-book-open"></i> Story</a>
+      <a href="#countdown" class="drawer-link"><i class="fa-solid fa-clock"></i> Countdown</a>
+      <a href="#details" class="drawer-link"><i class="fa-solid fa-calendar-day"></i> Details</a>
+      <a href="#venue" class="drawer-link"><i class="fa-solid fa-location-dot"></i> Venue</a>
+      <a href="#rsvp" class="drawer-link"><i class="fa-solid fa-envelope"></i> RSVP</a>
+      <a href="#wishes" class="drawer-link"><i class="fa-solid fa-comment-dots"></i> Wishes</a>
+    </div>
+  </div>
+
+  <!-- Hero Section -->
+  <section class="hero-section" id="hero">
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+      
+      <div class="hero-badge animate-fade-in">
+        <i class="fa-solid fa-sparkles"></i> You Are Cordially Invited <i class="fa-solid fa-sparkles"></i>
+      </div>
+
+      <h3 class="hero-subheading animate-fade-in delay-1">WE ARE GETTING MARRIED</h3>
+
+      <div class="hero-names animate-zoom-in delay-2">
+        <span class="name-groom">Mahmoud</span>
+        <span class="name-divider">&amp;</span>
+        <span class="name-bride" id="heroBrideName">Bride</span>
+      </div>
+
+      <p class="hero-date-badge animate-fade-in delay-3">
+        <i class="fa-regular fa-calendar-check"></i> August 19, 2026 &nbsp;|&nbsp; <i class="fa-solid fa-hotel"></i> Hilton Hotel
+      </p>
+
+      <!-- Cartoon Graphic Hero Illustration -->
+      <div class="hero-cartoon-wrapper animate-float delay-3">
+        <div class="cartoon-frame">
+          <img src="assets/wedding_couple_hero.jpg" alt="Mahmoud and Bride Cartoon Illustration" class="cartoon-img">
+          <div class="cartoon-glow"></div>
+        </div>
+        <div class="cartoon-caption">
+          <i class="fa-solid fa-heart pulse"></i> Mahmoud &amp; <span class="bride-display-name">Bride</span> <i class="fa-solid fa-heart pulse"></i>
+        </div>
+      </div>
+
+      <div class="hero-cta-buttons animate-fade-in delay-4">
+        <a href="#rsvp" class="btn-primary-gold">
+          <i class="fa-solid fa-paper-plane"></i> RSVP Now
+        </a>
+        <a href="#details" class="btn-glass">
+          <i class="fa-solid fa-circle-info"></i> Event Details
+        </a>
+      </div>
+
+    </div>
+
+    <a href="#countdown" class="scroll-down-indicator" aria-label="Scroll Down">
+      <i class="fa-solid fa-chevron-down bounce"></i>
+    </a>
+  </section>
+
+
+  <!-- Countdown Timer Section -->
+  <section class="countdown-section" id="countdown">
+    <div class="section-container">
+      
+      <div class="section-header">
+        <span class="section-tag">COUNTING DOWN THE DAYS</span>
+        <h2 class="section-title">Until We Say "I Do"</h2>
+        <div class="title-divider">
+          <span></span><i class="fa-solid fa-ring"></i><span></span>
+        </div>
+        <p class="section-subtitle">Join us as we count down to our wedding celebration on August 19, 2026</p>
+      </div>
+
+      <!-- Live Timer Cards -->
+      <div class="timer-grid" id="timerGrid">
+        <div class="timer-card glass-card">
+          <div class="timer-value" id="timerDays">00</div>
+          <div class="timer-label">DAYS</div>
+        </div>
+        <div class="timer-card glass-card">
+          <div class="timer-value" id="timerHours">00</div>
+          <div class="timer-label">HOURS</div>
+        </div>
+        <div class="timer-card glass-card">
+          <div class="timer-value" id="timerMinutes">00</div>
+          <div class="timer-label">MINUTES</div>
+        </div>
+        <div class="timer-card glass-card">
+          <div class="timer-value" id="timerSeconds">00</div>
+          <div class="timer-label">SECONDS</div>
+        </div>
+      </div>
+
+      <!-- Calendar Sync Actions -->
+      <div class="calendar-actions">
+        <button id="downloadIcsBtn" class="btn-outline-gold">
+          <i class="fa-solid fa-calendar-plus"></i> Save to Calendar (.ics)
+        </button>
+        <a id="googleCalBtn" href="#" target="_blank" class="btn-outline-gold">
+          <i class="fa-brands fa-google"></i> Google Calendar
+        </a>
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- Our Story / Celebration Intro Section -->
+  <section class="story-section" id="story">
+    <div class="section-container">
+      
+      <div class="story-card glass-card">
+        <div class="story-grid">
+          
+          <div class="story-image-side">
+            <div class="story-image-frame">
+              <img src="assets/wedding_couple_hero.jpg" alt="Couple portrait" class="story-img">
+              <div class="story-badge-overlay">
+                <span>Aug 19</span>
+                <small>2026</small>
+              </div>
+            </div>
+          </div>
+
+          <div class="story-text-side">
+            <span class="section-tag">OUR LOVE STORY</span>
+            <h2 class="story-title">A Journey of Two Hearts</h2>
+            <p class="story-p">
+              "Two lives, two hearts, joined together in friendship, united forever in love."
+            </p>
+            <p class="story-desc">
+              We are beyond thrilled to invite our beloved family and dear friends to celebrate the beginning of our forever chapter. Your presence at the Hilton Hotel will make our special day complete!
+            </p>
+
+            <div class="quote-box">
+              <i class="fa-solid fa-quote-left"></i>
+              <span>Love is not about how many days, months, or years you have been together. Love is about how much you love each other every single day.</span>
+            </div>
+
+            <div class="signature-line">
+              <span class="sig-name">Mahmoud</span>
+              <span class="sig-and">&amp;</span>
+              <span class="sig-name bride-display-name">Bride</span>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- Event Schedule & Details Section -->
+  <section class="details-section" id="details">
+    <div class="section-container">
+      
+      <div class="section-header">
+        <span class="section-tag">THE CELEBRATION</span>
+        <h2 class="section-title">Wedding Schedule &amp; Details</h2>
+        <div class="title-divider">
+          <span></span><i class="fa-solid fa-glass-water-droplet"></i><span></span>
+        </div>
+        <p class="section-subtitle">Wednesday, August 19, 2026 — Hilton Hotel</p>
+      </div>
+
+      <!-- Schedule Timeline Cards -->
+      <div class="timeline-grid">
+        
+        <div class="timeline-card glass-card">
+          <div class="timeline-icon">
+            <i class="fa-solid fa-comments"></i>
+          </div>
+          <span class="timeline-time">5:30 PM</span>
+          <h3 class="timeline-event">Guest Arrival &amp; Welcome</h3>
+          <p class="timeline-desc">Gather in the grand foyer for welcome drinks, photo opportunities, and joyful music.</p>
+        </div>
+
+        <div class="timeline-card glass-card highlight-card">
+          <div class="timeline-icon">
+            <i class="fa-solid fa-ring"></i>
+          </div>
+          <span class="timeline-time">6:30 PM</span>
+          <h3 class="timeline-event">Wedding Ceremony</h3>
+          <p class="timeline-desc">Mahmoud and <span class="bride-display-name">Bride</span> exchange vows and rings under the floral stage.</p>
+        </div>
+
+        <div class="timeline-card glass-card">
+          <div class="timeline-icon">
+            <i class="fa-solid fa-utensils"></i>
+          </div>
+          <span class="timeline-time">8:00 PM</span>
+          <h3 class="timeline-event">Dinner &amp; Banquet</h3>
+          <p class="timeline-desc">A gourmet dinner served in the Hilton Grand Ballroom accompanied by live orchestra music.</p>
+        </div>
+
+        <div class="timeline-card glass-card">
+          <div class="timeline-icon">
+            <i class="fa-solid fa-music"></i>
+          </div>
+          <span class="timeline-time">10:00 PM</span>
+          <h3 class="timeline-event">Cake Cutting &amp; Dancing</h3>
+          <p class="timeline-desc">First dance, wedding cake cutting, and dancing until midnight!</p>
+        </div>
+
+      </div>
+
+
+      <!-- Dress Code Section -->
+      <div class="dresscode-wrapper glass-card">
+        <div class="dresscode-content">
+          <div class="dresscode-icon">
+            <i class="fa-solid fa-user-tie"></i>
+          </div>
+          <div class="dresscode-info">
+            <h3>Dress Code: Formal Elegance / Black Tie</h3>
+            <p>We request our guests wear formal evening attire. Gentlemen: Tuxedo or Dark Suit. Ladies: Evening Gowns or Formal Dresses.</p>
+          </div>
+          <div class="dresscode-badges">
+            <span class="dc-badge"><i class="fa-solid fa-gem"></i> Elegant Formal</span>
+            <span class="dc-badge"><i class="fa-solid fa-palette"></i> Gold &amp; Royal Palette</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- Hilton Venue & Location Section -->
+  <section class="venue-section" id="venue">
+    <div class="section-container">
+      
+      <div class="section-header">
+        <span class="section-tag">THE VENUE</span>
+        <h2 class="section-title">Hilton Hotel Ballroom</h2>
+        <div class="title-divider">
+          <span></span><i class="fa-solid fa-hotel"></i><span></span>
+        </div>
+        <p class="section-subtitle">A stunning setting for an unforgettable wedding night</p>
+      </div>
+
+      <div class="venue-grid">
+        
+        <!-- Venue Cartoon Graphic Card -->
+        <div class="venue-graphic-card glass-card">
+          <div class="venue-image-box">
+            <img src="assets/hilton_venue_cartoon.jpg" alt="Hilton Ballroom Cartoon Graphic" class="venue-img">
+            <div class="venue-tag">Hilton Grand Ballroom</div>
+          </div>
+          <div class="venue-details-body">
+            <h3><i class="fa-solid fa-building"></i> Luxury &amp; Glamour</h3>
+            <p>Featuring magnificent crystal chandeliers, spacious marble dance floors, and opulent wedding decor customized for Mahmoud &amp; <span class="bride-display-name">Bride</span>.</p>
+          </div>
+        </div>
+
+        <!-- Venue Location & Map Info Card -->
+        <div class="venue-map-card glass-card">
+          <div class="map-info-header">
+            <h3><i class="fa-solid fa-map-location-dot"></i> Location &amp; Directions</h3>
+            <p class="hotel-address">
+              <strong>Hilton Hotel &amp; Suites</strong><br>
+              Grand Ballroom Entrance<br>
+              Main Boulevard, City Center
+            </p>
+          </div>
+
+          <div class="map-features">
+            <div class="map-feat-item">
+              <i class="fa-solid fa-square-parking"></i>
+              <div>
+                <strong>Valet Parking</strong>
+                <span>Complimentary valet parking available for all guests.</span>
+              </div>
+            </div>
+
+            <div class="map-feat-item">
+              <i class="fa-solid fa-bed"></i>
+              <div>
+                <strong>Room Reservations</strong>
+                <span>Discounted rooms available under the "Mahmoud Wedding" group code.</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="map-action-box">
+            <a href="https://maps.google.com/?q=Hilton+Hotel" target="_blank" rel="noopener" class="btn-primary-gold btn-full">
+              <i class="fa-solid fa-location-arrow"></i> Open in Google Maps
+            </a>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- RSVP Form Section -->
+  <section class="rsvp-section" id="rsvp">
+    <div class="section-container">
+      
+      <div class="rsvp-card-wrapper glass-card">
+        
+        <div class="section-header">
+          <span class="section-tag">PLEASE CONFIRM</span>
+          <h2 class="section-title">RSVP to Our Wedding</h2>
+          <div class="title-divider">
+            <span></span><i class="fa-solid fa-paper-plane"></i><span></span>
+          </div>
+          <p class="section-subtitle">Kindly respond by August 1, 2026 to help us finalize catering &amp; seating.</p>
+        </div>
+
+        <form id="rsvpForm" class="rsvp-form">
+          <div class="form-row">
+            <div class="form-group">
+              <label for="guestName"><i class="fa-solid fa-user"></i> Your Full Name *</label>
+              <input type="text" id="guestName" required placeholder="e.g. Alexander Smith" class="form-input">
+            </div>
+
+            <div class="form-group">
+              <label for="guestEmail"><i class="fa-solid fa-envelope"></i> Email Address *</label>
+              <input type="email" id="guestEmail" required placeholder="name@example.com" class="form-input">
+            </div>
+          </div>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label for="attendance"><i class="fa-solid fa-circle-check"></i> Will You Attend? *</label>
+              <select id="attendance" required class="form-input">
+                <option value="Joyfully Accept">🎉 Joyfully Accept with Honor</option>
+                <option value="Regretfully Decline">💌 Regretfully Decline with Love</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label for="guestCount"><i class="fa-solid fa-users"></i> Total Number of Guests *</label>
+              <select id="guestCount" class="form-input">
+                <option value="1">1 Person (Just Me)</option>
+                <option value="2">2 Persons (+ Plus One)</option>
+                <option value="3">3 Persons (Family)</option>
+                <option value="4">4+ Persons (Family Group)</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="dietary"><i class="fa-solid fa-utensils"></i> Dietary Preferences / Special Notes</label>
+            <input type="text" id="dietary" placeholder="e.g. Vegetarian, Halal, Gluten-Free, Allergies" class="form-input">
+          </div>
+
+          <div class="form-group">
+            <label for="wishesMessage"><i class="fa-solid fa-heart"></i> Personal Message / Wishes for Mahmoud &amp; <span class="bride-display-name">Bride</span></label>
+            <textarea id="wishesMessage" rows="4" placeholder="Write your heartfelt congratulations and wishes for the couple..." class="form-input"></textarea>
+          </div>
+
+          <div class="form-submit-container">
+            <button type="submit" class="btn-primary-gold btn-large">
+              <i class="fa-solid fa-paper-plane"></i> Send RSVP Confirmation
+            </button>
+          </div>
+        </form>
+
+        <!-- RSVP Success Alert -->
+        <div id="rsvpSuccessMsg" class="rsvp-success-box hidden">
+          <i class="fa-solid fa-circle-check success-icon"></i>
+          <h3>Thank You For Your RSVP!</h3>
+          <p id="rsvpSuccessDetail">We look forward to celebrating with you at the Hilton on August 19, 2026!</p>
+          <button id="rsvpResetBtn" class="btn-glass-sm">Submit Another RSVP</button>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- Wishes & Guestbook Wall Section -->
+  <section class="wishes-section" id="wishes">
+    <div class="section-container">
+      
+      <div class="section-header">
+        <span class="section-tag">GUESTBOOK</span>
+        <h2 class="section-title">Wishes &amp; Blessings Wall</h2>
+        <div class="title-divider">
+          <span></span><i class="fa-solid fa-heart-pulse"></i><span></span>
+        </div>
+        <p class="section-subtitle">Warm messages left by beloved friends and family</p>
+      </div>
+
+      <div class="wishes-grid" id="wishesGrid">
+        <!-- Dynamic wishes will render here -->
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-container">
+      <div class="footer-names">
+        Mahmoud <span class="amp">&amp;</span> <span class="bride-display-name">Bride</span>
+      </div>
+      <p class="footer-date">August 19, 2026 &bull; Hilton Hotel</p>
+      <p class="footer-thanks">Thank you for being part of our love story!</p>
+      <div class="footer-copyright">
+        &copy; 2026 Mahmoud &amp; <span class="bride-display-name">Bride</span> Wedding Invitation. Crafted with love.
+      </div>
+    </div>
+  </footer>
+
+
+  <!-- Edit Bride Name Modal -->
+  <div class="modal-overlay" id="brideNameModal">
+    <div class="modal-card glass-card">
+      <button class="modal-close" id="closeBrideModal">&times;</button>
+      
+      <div class="modal-header">
+        <i class="fa-solid fa-wand-magic-sparkles modal-icon"></i>
+        <h3>Customize Bride's Name</h3>
+        <p>Type the bride's name to personalize the wedding invitation website in real-time!</p>
+      </div>
+
+      <div class="modal-body">
+        <div class="form-group">
+          <label for="brideNameInput">Bride's Name:</label>
+          <input type="text" id="brideNameInput" value="Bride" placeholder="Enter Bride's Name (e.g. Sarah, Layla)" class="form-input">
+        </div>
+      </div>
+
+      <div class="modal-footer">
+        <button id="saveBrideNameBtn" class="btn-primary-gold btn-full">
+          <i class="fa-solid fa-check"></i> Apply Bride Name
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
